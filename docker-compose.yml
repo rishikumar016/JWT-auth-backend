@@ -1,0 +1,10 @@
+services:
+  api:
+    build: .
+    image: auth-backend:latest
+    container_name: auth-backend
+    restart: unless-stopped
+    env_file:
+      - .env
+    ports:
+      - "8000:8000"
